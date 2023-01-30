@@ -2,6 +2,7 @@
 #define FORM2_H
 
 #include <QDialog>
+#include <fstream>
 
 namespace Ui {
     class Form2;
@@ -20,7 +21,7 @@ private:
 
 private slots:
 
-    void on_pushButton_clicked();
+    void on_okButton_clicked();
 };
 
 #endif // FORM2_H

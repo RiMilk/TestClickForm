@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Form2_t {
     QByteArrayData data[3];
-    char stringdata0[29];
+    char stringdata0[27];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,11 +33,11 @@ struct qt_meta_stringdata_Form2_t {
 static const qt_meta_stringdata_Form2_t qt_meta_stringdata_Form2 = {
     {
 QT_MOC_LITERAL(0, 0, 5), // "Form2"
-QT_MOC_LITERAL(1, 6, 21), // "on_pushButton_clicked"
-QT_MOC_LITERAL(2, 28, 0) // ""
+QT_MOC_LITERAL(1, 6, 19), // "on_okButton_clicked"
+QT_MOC_LITERAL(2, 26, 0) // ""
 
     },
-    "Form2\0on_pushButton_clicked\0"
+    "Form2\0on_okButton_clicked\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -69,7 +69,7 @@ void Form2::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         auto *_t = static_cast<Form2 *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_pushButton_clicked(); break;
+        case 0: _t->on_okButton_clicked(); break;
         default: ;
         }
     }
