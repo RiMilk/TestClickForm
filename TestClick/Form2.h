@@ -17,6 +17,10 @@ public:
 
 private:
     Ui::Form2* ui;
+
+private slots:
+
+    void on_pushButton_clicked();
 };
 
 #endif // FORM2_H

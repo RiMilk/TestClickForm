@@ -5,7 +5,13 @@ Form2::Form2(QWidget* parent) : QDialog(parent), ui(new Ui::Form2)
 {
 
 }
+
 Form2::~Form2()
 {
 	delete ui;
+}
+
+void Form2::on_pushButton_clicked()
+{
+
 }

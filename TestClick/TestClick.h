@@ -20,6 +20,6 @@ private:
 
 private slots:
 
-    void on_action_form2_triggered();
+    void on_form2_clicked();
 
 };

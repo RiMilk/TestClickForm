@@ -48,7 +48,7 @@ public:
     void retranslateUi(QMainWindow *TestClickClass)
     {
         TestClickClass->setWindowTitle(QCoreApplication::translate("TestClickClass", "TestClick", nullptr));
-        form2->setText(QCoreApplication::translate("TestClickClass", "PushButton", nullptr));
+        form2->setText(QCoreApplication::translate("TestClickClass", "Push me", nullptr));
     } // retranslateUi
 
 };

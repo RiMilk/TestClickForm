@@ -1,14 +1,2 @@
-﻿  Reading Qt configuration (C:/Qt/Qt5.13.1/5.13.1/msvc2017_64/bin/qmake)
-  uic Form2.ui
-  uic TestClick.ui
-  rcc TestClick.qrc
-  moc TestClick.h
-  moc Form2.h
-   RCC: Warning: No resources in 'C:\TestClickForm\TestClick\TestClick.qrc'.
-  Form2.cpp
-  TestClick.cpp
-  main.cpp
-  qrc_TestClick.cpp
-  moc_TestClick.cpp
-  moc_Form2.cpp
+﻿  Form2.cpp
   TestClick.vcxproj -> C:\TestClickForm\TestClick\x64\Debug\TestClick.exe

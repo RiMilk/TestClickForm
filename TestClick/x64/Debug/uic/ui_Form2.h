@@ -13,38 +13,24 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QVBoxLayout>
-#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_Form2
 {
 public:
-    QWidget *layoutWidget;
-    QVBoxLayout *vboxLayout;
-    QPushButton *okButton;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *Form2)
     {
         if (Form2->objectName().isEmpty())
             Form2->setObjectName(QString::fromUtf8("Form2"));
         Form2->resize(592, 419);
-        layoutWidget = new QWidget(Form2);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(456, 350, 131, 61));
-        vboxLayout = new QVBoxLayout(layoutWidget);
-        vboxLayout->setSpacing(6);
-        vboxLayout->setObjectName(QString::fromUtf8("vboxLayout"));
-        vboxLayout->setContentsMargins(0, 0, 0, 0);
-        okButton = new QPushButton(layoutWidget);
-        okButton->setObjectName(QString::fromUtf8("okButton"));
-
-        vboxLayout->addWidget(okButton);
-
+        pushButton = new QPushButton(Form2);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(230, 190, 75, 23));
 
         retranslateUi(Form2);
-        QObject::connect(okButton, SIGNAL(clicked()), Form2, SLOT(accept()));
 
         QMetaObject::connectSlotsByName(Form2);
     } // setupUi
@@ -52,7 +38,7 @@ public:
     void retranslateUi(QDialog *Form2)
     {
         Form2->setWindowTitle(QCoreApplication::translate("Form2", "Dialog", nullptr));
-        okButton->setText(QCoreApplication::translate("Form2", "OK", nullptr));
+        pushButton->setText(QCoreApplication::translate("Form2", "push me", nullptr));
     } // retranslateUi
 
 };

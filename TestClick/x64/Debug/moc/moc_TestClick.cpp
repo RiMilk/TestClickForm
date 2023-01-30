@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_TestClick_t {
     QByteArrayData data[3];
-    char stringdata0[37];
+    char stringdata0[28];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,12 +33,11 @@ struct qt_meta_stringdata_TestClick_t {
 static const qt_meta_stringdata_TestClick_t qt_meta_stringdata_TestClick = {
     {
 QT_MOC_LITERAL(0, 0, 9), // "TestClick"
-QT_MOC_LITERAL(1, 10, 25), // "on_action_form2_triggered"
-QT_MOC_LITERAL(2, 36, 0) // ""
+QT_MOC_LITERAL(1, 10, 16), // "on_form2_clicked"
+QT_MOC_LITERAL(2, 27, 0) // ""
 
     },
-    "TestClick\0on_action_form2_triggered\0"
-    ""
+    "TestClick\0on_form2_clicked\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -70,7 +69,7 @@ void TestClick::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         auto *_t = static_cast<TestClick *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_action_form2_triggered(); break;
+        case 0: _t->on_form2_clicked(); break;
         default: ;
         }
     }
