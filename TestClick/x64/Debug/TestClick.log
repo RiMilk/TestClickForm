@@ -1,3 +1,4 @@
-﻿  Form2.cpp
+﻿  TestClick.cpp
   main.cpp
+  moc_TestClick.cpp
   TestClick.vcxproj -> C:\TestClickForm\TestClick\x64\Debug\TestClick.exe

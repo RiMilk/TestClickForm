@@ -15,49 +15,49 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
-#include <QtWidgets/QWidget>
+#include <QtWidgets/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_Form2
 {
 public:
-    QWidget *layoutWidget;
+    QVBoxLayout *verticalLayout;
     QHBoxLayout *hboxLayout;
-    QSpacerItem *spacerItem;
+    QSpacerItem *horizontalSpacer;
     QPushButton *okButton;
-    QPushButton *cancelButton;
+    QSpacerItem *horizontalSpacer_2;
 
     void setupUi(QDialog *Form2)
     {
         if (Form2->objectName().isEmpty())
             Form2->setObjectName(QString::fromUtf8("Form2"));
-        Form2->resize(400, 300);
-        layoutWidget = new QWidget(Form2);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(20, 250, 351, 33));
-        hboxLayout = new QHBoxLayout(layoutWidget);
+        Form2->resize(609, 542);
+        verticalLayout = new QVBoxLayout(Form2);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        hboxLayout = new QHBoxLayout();
         hboxLayout->setSpacing(6);
         hboxLayout->setObjectName(QString::fromUtf8("hboxLayout"));
         hboxLayout->setContentsMargins(0, 0, 0, 0);
-        spacerItem = new QSpacerItem(131, 31, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        hboxLayout->addItem(spacerItem);
+        hboxLayout->addItem(horizontalSpacer);
 
-        okButton = new QPushButton(layoutWidget);
+        okButton = new QPushButton(Form2);
         okButton->setObjectName(QString::fromUtf8("okButton"));
 
         hboxLayout->addWidget(okButton);
 
-        cancelButton = new QPushButton(layoutWidget);
-        cancelButton->setObjectName(QString::fromUtf8("cancelButton"));
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        hboxLayout->addWidget(cancelButton);
+        hboxLayout->addItem(horizontalSpacer_2);
+
+
+        verticalLayout->addLayout(hboxLayout);
 
 
         retranslateUi(Form2);
         QObject::connect(okButton, SIGNAL(clicked()), Form2, SLOT(accept()));
-        QObject::connect(cancelButton, SIGNAL(clicked()), Form2, SLOT(reject()));
 
         QMetaObject::connectSlotsByName(Form2);
     } // setupUi
@@ -66,7 +66,6 @@ public:
     {
         Form2->setWindowTitle(QCoreApplication::translate("Form2", "Dialog", nullptr));
         okButton->setText(QCoreApplication::translate("Form2", "OK", nullptr));
-        cancelButton->setText(QCoreApplication::translate("Form2", "Cancel", nullptr));
     } // retranslateUi
 
 };
