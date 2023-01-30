@@ -12,9 +12,8 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -22,9 +21,8 @@ QT_BEGIN_NAMESPACE
 class Ui_TestClickClass
 {
 public:
-    QMenuBar *menuBar;
-    QToolBar *mainToolBar;
     QWidget *centralWidget;
+    QPushButton *form2;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *TestClickClass)
@@ -32,14 +30,11 @@ public:
         if (TestClickClass->objectName().isEmpty())
             TestClickClass->setObjectName(QString::fromUtf8("TestClickClass"));
         TestClickClass->resize(600, 400);
-        menuBar = new QMenuBar(TestClickClass);
-        menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        TestClickClass->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(TestClickClass);
-        mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
-        TestClickClass->addToolBar(mainToolBar);
         centralWidget = new QWidget(TestClickClass);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
+        form2 = new QPushButton(centralWidget);
+        form2->setObjectName(QString::fromUtf8("form2"));
+        form2->setGeometry(QRect(230, 190, 75, 23));
         TestClickClass->setCentralWidget(centralWidget);
         statusBar = new QStatusBar(TestClickClass);
         statusBar->setObjectName(QString::fromUtf8("statusBar"));
@@ -53,6 +48,7 @@ public:
     void retranslateUi(QMainWindow *TestClickClass)
     {
         TestClickClass->setWindowTitle(QCoreApplication::translate("TestClickClass", "TestClick", nullptr));
+        form2->setText(QCoreApplication::translate("TestClickClass", "PushButton", nullptr));
     } // retranslateUi
 
 };
